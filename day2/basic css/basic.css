@@ -59,3 +59,28 @@ p{
 #hsla{
     color: hsla(0, 100%, 47%, 0.164)
 }
+/* semua tag div yanga ada dalam div yang memiliki class box-containert*/
+
+div.box-container div{
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  line-height: 500px;
+  color: white
+}
+.backround-color{
+    background-color: #11a554
+}
+.backround-image{
+    background-image:url(../tugas/files/pictures/Logo-Css-720x720.png);
+    background-size: cover;
+    background-size: contain;
+    /*
+        cover 
+        ukuran gambar di sesuaikan dengan ukuran dari elemen 
+        jika ratio gambar dan rasio elemen tidak sama 
+        menyebabkab sebagian gambar di potong
+        contain 
+        gambar didalam elmen secara penuh
+    */
+}
