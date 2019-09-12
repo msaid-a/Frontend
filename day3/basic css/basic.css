@@ -137,6 +137,8 @@ div.box-container div{
 }
 #google_font-one{
     font-family: Chilanka, cursive;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 #google_font-two{
@@ -144,3 +146,46 @@ div.box-container div{
 }
 
 /* Box Model */
+.width-height{
+    width: 500px;
+    height: 300px;
+    background-color: crimson;
+}
+.padding{
+    background-color: aqua;
+    color: black;
+    padding : 20px 35px 55px 13px;
+    /* padding-left: 13px;
+    padding-top: 20px;
+    padding-right: 35px;
+    padding-bottom: 55px; */
+    /* 
+        Sgorthand padding
+        padfing : 5px; semua sisi element
+        padding : 5px 10px; top & bottom: 5px left 10px right
+        padding : 5px 10px 15px : top , left & ringht, bottom
+        padding : 5px 10px 15px 20px : top - right-bottom- left
+    */
+}
+.margin{
+    width: 500px;
+    height: 300px;
+    background-color: red;
+    color: black;
+    margin : 20px;
+}
+
+.margin-one{
+    /* margin-bottom: 20px; */
+}
+.margin-two{
+    /* margin-top: 50px;
+    margin-bottom: 40px; */
+}
+/* 
+        Sgorthand margin
+        margin : 5px; semua sisi element
+        margin : 5px 10px; top & bottom: 5px left 10px right
+        margin : 5px 10px 15px : top , left & ringht, bottom
+        margin : 5px 10px 15px 20px : top - right-bottom- left
+    */
