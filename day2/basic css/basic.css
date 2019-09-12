@@ -93,3 +93,7 @@ div.box-container div{
         gambar didalam elmen secara penuh
     */
 }
+.backround-size {
+    background-image: url(../tugas/files/pictures/Logo-Css-720x720.png);
+    background-size: 500px 300px
+}
