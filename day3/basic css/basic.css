@@ -1,0 +1,115 @@
+/* */
+/* 
+h2 : selector 
+color : property
+blueviolet : value
+
+*/
+h1 {
+    color :crimson
+}
+h2{
+    color : blueviolet; 
+}
+/* semua tac paragraf */
+p{
+    color: blue;
+}
+/* id Selector */
+#pertama{
+    color: crimson;
+}
+/* class selector */
+/* tang yang memiliki calss = */
+.hijau{
+    color: green;
+}
+[id]{
+    color: royalblue;
+}
+
+
+/* Color */
+/*keyword */
+#corn{
+    color: cornflowerblue;
+}
+/* rgb, red green blue
+    range 0-5
+*/
+#rgb{
+    color: rgb(190, 11, 11);
+}
+/*rgba bisa di atur transparasi warna
+    untuk alpha dari 0-1
+*/
+#rgba{
+    color: rgba(12, 26, 104, 0.521);
+}
+
+/* hex */
+#hex{
+    color: #11a554
+}
+
+/*HSL */
+#hsl{
+    color: hsl(0, 83%, 14%)
+}
+#hsla{
+    color: hsla(0, 100%, 47%, 0.164)
+}
+/* semua tag div yanga ada dalam div yang memiliki class box-containert*/
+
+div.box-container div{
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+  color: white
+}
+.backround-color{
+    background-color: #11a554
+}
+.backround-image{
+    background-color: #121212;
+    background-image:url(../tugas/files/pictures/logo-css-150x150.png);
+    /* background-size: cover;
+    background-size: contain; */
+    background-repeat: no-repeat;
+    /* x horizontal y vertikal */
+    /* background-position-x: right;
+    background-position-y: bottom; */
+
+    /* jika hanya 1 di deklar maka otomatis dengan cernter */
+    background-position: center;
+    /* background-size: 500px 300px width heigth jika hanya mendeklar 1 maka berlaku pada keduanya */
+    /*
+        cover 
+        ukuran gambar di sesuaikan dengan ukuran dari elemen 
+        jika ratio gambar dan rasio elemen tidak sama 
+        menyebabkab sebagian gambar di potong
+        contain 
+        gambar didalam elmen secara penuh
+    */
+}
+.backround-size {
+    background-image: url(../tugas/files/pictures/Logo-Css-720x720.png);
+    background-size: 500px 300px
+}
+/* kalau di simpen di class yang sama */
+.box-attach{
+    background-attachment: fixed;
+}
+.backround-attachment-one{
+    background-image: url(../tugas/files/pictures/logo-css-150x150.png);
+    /* background-attachment: fixed; */
+}
+.backround-attachment-two{
+    background-image: url(../tugas/files/pictures/kitty.jpg);
+    /* background-attachment: fixed; */
+}
+
+.backround-shorthand{
+    background: url(../tugas/files/pictures/logo-css-300x300.png) center center fixed purple;
+}
