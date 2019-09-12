@@ -175,17 +175,32 @@ div.box-container div{
     margin : 20px;
 }
 
-.margin-one{
-    /* margin-bottom: 20px; */
+/* .margin-one{
+    margin-bottom: 20px;
 }
 .margin-two{
-    /* margin-top: 50px;
-    margin-bottom: 40px; */
-}
+    margin-top: 50px;
+    margin-bottom: 40px;
+} */
 /* 
         Sgorthand margin
-        margin : 5px; semua sisi element
+        margin : 5px; Top & bottom
         margin : 5px 10px; top & bottom: 5px left 10px right
         margin : 5px 10px 15px : top , left & ringht, bottom
         margin : 5px 10px 15px 20px : top - right-bottom- left
     */
+    .last{
+        width: 80%;
+        /* akang mengambil lebar parent */
+        height: 300px;
+        font-family: Chilanka, cursive;
+        font-size: 30px;
+        background-color: cornflowerblue;
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+        padding : 30px;
+        margin : 2cm auto;
+        border:10px solid crimson;
+        /* border : weight style(solid,dotted,dashed) color */
+    }
