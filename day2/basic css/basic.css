@@ -65,16 +65,25 @@ div.box-container div{
   width: 500px;
   height: 300px;
   text-align: center;
-  line-height: 500px;
+  line-height: 300px;
   color: white
 }
 .backround-color{
     background-color: #11a554
 }
 .backround-image{
-    background-image:url(../tugas/files/pictures/Logo-Css-720x720.png);
-    background-size: cover;
-    background-size: contain;
+    background-color: #121212;
+    background-image:url(../tugas/files/pictures/logo-css-150x150.png);
+    /* background-size: cover;
+    background-size: contain; */
+    background-repeat: no-repeat;
+    /* x horizontal y vertikal */
+    /* background-position-x: right;
+    background-position-y: bottom; */
+
+    /* jika hanya 1 di deklar maka otomatis dengan cernter */
+    background-position: center;
+    /* background-size: 500px 300px width heigth jika hanya mendeklar 1 maka berlaku pada keduanya */
     /*
         cover 
         ukuran gambar di sesuaikan dengan ukuran dari elemen 
