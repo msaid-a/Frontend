@@ -113,3 +113,19 @@ div.box-container div{
 .backround-shorthand{
     background: url(../tugas/files/pictures/logo-css-300x300.png) center center fixed purple;
 }
+
+#font{
+    margin-top: 100px;
+    background-color: aqua;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-style: italic; /*normal , ubique*/
+    font-weight: bold;
+    text-transform: capitalize; /*Lowercase , Uppercase*/
+    text-align: center; /*left right*/
+    text-decoration: line-through; /*underline, overline, line-trough*/
+}
+
+
+/* Box Model */
