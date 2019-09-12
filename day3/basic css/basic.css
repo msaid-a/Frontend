@@ -127,5 +127,20 @@ div.box-container div{
     text-decoration: line-through; /*underline, overline, line-trough*/
 }
 
+.google-font {
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 100px;
+    background-color: azure;
+}
+#google_font-one{
+    font-family: Chilanka, cursive;
+}
+
+#google_font-two{
+    font-family: Pacifico, cursive;
+}
 
 /* Box Model */
