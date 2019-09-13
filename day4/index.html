@@ -3,41 +3,13 @@
 <head>
     <title>Table</title>
 </head>
-<style>
-    /* untuk tag table, th , td akan memiliki border */
-    table,th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        text-align: center;
-        padding: 20px;
-    }
-    table{
-        margin: 20px auto;
-    }
-    th{
-        padding-top: 20px; 
-        padding-bottom: 20px; 
-    }
-    /* semua tag yang memiliki class wrappper */
-    .wrapper{
-
-    }
-    /* hanya tag div yang memuliki class wrapper */
-    div.wrapper{
-        padding: 10px
-    }
-    table.table-wrap{
-        margin-bottom: 30px
-    }
-    table.table-data{
-        margin: 10px;
-    }
-</style>
+<!-- mengunbungkan file html dan javascript-->
+<script defer src="function.js"></script>
+<link rel="stylesheet" href="style.css">
 <body>
     <h1 style="text-align: center">Table</h1>
     <!-- Tabel From -->
     <table class="table-wrap">
-
         <tr>
             <th>From Manusia</th>
             <th>Form Hewan</th>
@@ -56,21 +28,44 @@
                         </p>
                         <p>
                             <label for="">Jenis Kelamin</label>
-                            <input type="radio" name="gender" id="gender" value="Pria">Pria
-                            <input type="radio" name="gender" id="gender" value="Wanita">Wanita
+                            <input type="radio" name="gender"  value="Pria" >Pria
+                            <input type="radio" name="gender"  value="Wanita" >Wanita
                         </p>
                         <p> Pekerjaan :
                             <select name="pekerjaan" id="pekerjaan">
-                                <option value="guru" id="pekerjaan">guru</option>
-                                <option value="Polisi" id="pekerjaan">Polisi</option>
-                                <option value="TNI" id="pekerjaan">TNI</option>
+                                <option value="Guru">Guru</option>
+                                <option value="Polisi" >Polisi</option>
+                                <option value="TNI">TNI</option>
                             </select>
                         </p>
-                        <input type="submit" value="Tambahkan" id="submit">
+                        <input type="button" value="Tambahkan" id="tambahkan" onclick="input()">
                     </div>
                 </form>
             </td>
-            <td>FROM ISI DATA HEWAN</td>
+            <td>
+                    <form action="">
+                            <div class="wrapper">
+                                <p>
+                                    <label for="">Nama : </label>
+                                    <input type="text" id="nama_hewan">
+                                </p>
+                                <p>
+                                    <label for="">Umur :</label>
+                                    <input type="number" name="umur" id="umur_hewan">
+                                </p>
+                                <p>
+                                    <label for="">Jenis Kelamin</label>
+                                    <input type="radio" name="gender_hewan"  value="Jantan" >Jantan
+                                    <input type="radio" name="gender_hewan"  value="Betina" >Betina
+                                </p>
+                                <p> Pekerjaan :
+                                        <input type="radio" name="status"  value="Liar" >Liar
+                                        <input type="radio" name="status"  value="Peliharaan" >Peliharaan
+                                </p>
+                                <input type="button" value="Tambahkan" id="tambahkan" onclick="inputHewan()">
+                            </div>
+                        </form>
+            </td>
         </tr>
     </table>
     <table>
@@ -81,16 +76,33 @@
         <tr>
             <td>
                 <table class="table-data">
-                    <tr>
+                    <thead>
                         <th>No</th>
                         <th>Nama</th>
                         <th>Umur</th>
                         <th>Jenis Kelamin</th>
                         <th>Pekerjaan</th>
-                    </tr>
+                    </thead>
+                    <tbody id='list-manusia'>
+                        <!-- list akan di render-->
+                        
+                    </tbody>
                 </table>
             </td>
-            <td>Data Hewan</td>
+            <td>
+                <table id="tabel-data">
+                        <thead>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Umur</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Status</th>
+                        </thead>
+                        <tbody id="list-hewan">
+                            <!--list hewan-->
+                        </tbody>
+                </table>
+            </td>
         </tr>
     </table>
     <!--

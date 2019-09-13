@@ -1,0 +1,29 @@
+
+    /* untuk tag table, th , td akan memiliki border */
+    table,th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 20px;
+    }
+    table{
+        margin: 20px auto;
+    }
+    th{
+        padding-top: 20px; 
+        padding-bottom: 20px; 
+    }
+    /* semua tag yang memiliki class wrappper */
+    .wrapper{
+
+    }
+    /* hanya tag div yang memuliki class wrapper */
+    div.wrapper{
+        padding: 10px
+    }
+    table.table-wrap{
+        margin-bottom: 30px
+    }
+    table.table-data{
+        margin: 10px;
+    }
