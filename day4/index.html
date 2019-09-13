@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Table</title>
+</head>
+<style>
+    /* untuk tag table, th , td akan memiliki border */
+    table,th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 20px;
+    }
+    table{
+        margin: 20px auto;
+    }
+    th{
+        padding-top: 20px; 
+        padding-bottom: 20px; 
+    }
+    /* semua tag yang memiliki class wrappper */
+    .wrapper{
+
+    }
+    /* hanya tag div yang memuliki class wrapper */
+    div.wrapper{
+        padding: 10px
+    }
+    table.table-wrap{
+        margin-bottom: 30px
+    }
+    table.table-data{
+        margin: 10px;
+    }
+</style>
+<body>
+    <h1 style="text-align: center">Table</h1>
+    <!-- Tabel From -->
+    <table class="table-wrap">
+
+        <tr>
+            <th>From Manusia</th>
+            <th>Form Hewan</th>
+        </tr>
+        <tr>
+            <td>
+                <form action="">
+                    <div class="wrapper">
+                        <p>
+                            <label for="">Nama : </label>
+                            <input type="text" id="nama">
+                        </p>
+                        <p>
+                            <label for="">Umur :</label>
+                            <input type="number" name="umur" id="umur">
+                        </p>
+                        <p>
+                            <label for="">Jenis Kelamin</label>
+                            <input type="radio" name="gender" id="gender" value="Pria">Pria
+                            <input type="radio" name="gender" id="gender" value="Wanita">Wanita
+                        </p>
+                        <p> Pekerjaan :
+                            <select name="pekerjaan" id="pekerjaan">
+                                <option value="guru" id="pekerjaan">guru</option>
+                                <option value="Polisi" id="pekerjaan">Polisi</option>
+                                <option value="TNI" id="pekerjaan">TNI</option>
+                            </select>
+                        </p>
+                        <input type="submit" value="Tambahkan" id="submit">
+                    </div>
+                </form>
+            </td>
+            <td>FROM ISI DATA HEWAN</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Data Manuisa</th>
+            <th>Data Hewan</th>
+        </tr>
+        <tr>
+            <td>
+                <table class="table-data">
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Umur</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Pekerjaan</th>
+                    </tr>
+                </table>
+            </td>
+            <td>Data Hewan</td>
+        </tr>
+    </table>
+    <!--
+        <tr> : tabel row untuk menentukan banyak nya baris
+        <td> : tabel data unutk menentukan banyak nya kolom
+        <th> : Untuk menentukan style berbeda pada judul kolom
+    -->
+</body>
+</html>
