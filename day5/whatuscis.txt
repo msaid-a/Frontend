@@ -1,7 +1,15 @@
-cascade 
-ada paling tidak 3 jenis tyule yang dapat igunakan untuk menulis cdd, Antara lain :
-    1. inline style
-    2. external style dan internal style
-Penulisan di atas di urutkan berdasarkan prioritas, rxternal dan internal memiliki prioritas yang sama. kertika memiliki prioritas yang sama makan akan menerapkan 'Lasat Rules Apply' Yaitu ysang terakhir kali di definisikan.
+Cascade
+    Ada paling tidak 3 jenis style yang dapat digunakan untuk menulis CSS, antara lain:
+    
+    1. Inline style
+    2. External Style dan Internal Style
 
-jika pada style yang sama
+    Penulisan di atas di urutkan berdasarkan prioritas, External dan Internal memiliki prioritas yang
+    sama. Ketika memiliki priotitas yang sama maka akan menerapkan 'Last rules apply' yaitu yang 
+    terakhir kali di definisikan.
+
+    Jika pada style yang sama, men-select element yang sama, maka 'Last rules apply' akan di terapkan
+
+Inheritance
+
+Specificity
