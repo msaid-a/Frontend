@@ -1,0 +1,10 @@
+.container{
+    color: red;
+    font-size: 20px;
+    border: 2px dotted cornflowerblue;
+    background-color: aqua;
+}
+.container-child{
+    border: 2px solid red;
+    background-color: salmon;
+}

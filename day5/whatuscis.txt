@@ -11,5 +11,18 @@ Cascade
     Jika pada style yang sama, men-select element yang sama, maka 'Last rules apply' akan di terapkan
 
 Inheritance
+    Suatu style pada suatu element itu dapat di turunkan pada element lain yang menjadu sebuah childern
+    tidak semua style dapat di turunkan.
+
+    style umum yang dapat di turunkan antara lain 
+        -color
+        -font
+        -background
+    style umum yang tidak dapat di turunkan antara lain 
+        -border
+        -width
+        -height
+        -margin
 
 Specificity
+    Setiap selector memiliki nilai yang berbeda, yang akan menentukan selector mana yang akan di terapkan
