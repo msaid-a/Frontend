@@ -82,3 +82,26 @@
     grid-column: 3/4;
     grid-row: 2/4;
 }
+/* Justify & Align Content */
+/* 
+justify = horizontal
+start dari kiri end kanan, center 
+
+align : vertikal 
+start dari atas end bawah, center
+*/
+.content-container{
+    display: grid;
+    width: 90%;
+    height: 500px;
+    margin : 0 auto;
+    background-color: aqua;
+
+    grid-template-columns: 80px 150px 80px;
+    grid-auto-rows: 80px;
+    gap: 10px; /* row dan coloum */
+    /* justify-content: end;
+    align-content: end; */
+    justify-content: center;
+    align-content: center;
+}
