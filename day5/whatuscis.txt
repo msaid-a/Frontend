@@ -1,0 +1,7 @@
+cascade 
+ada paling tidak 3 jenis tyule yang dapat igunakan untuk menulis cdd, Antara lain :
+    1. inline style
+    2. external style dan internal style
+Penulisan di atas di urutkan berdasarkan prioritas, rxternal dan internal memiliki prioritas yang sama. kertika memiliki prioritas yang sama makan akan menerapkan 'Lasat Rules Apply' Yaitu ysang terakhir kali di definisikan.
+
+jika pada style yang sama
