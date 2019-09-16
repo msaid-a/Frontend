@@ -85,10 +85,20 @@
 /* Justify & Align Content */
 /* 
 justify = horizontal
-start dari kiri end kanan, center 
+start dari kiri 
+end kanan, 
+center 
+space-arround
+space-between
+sapce-evenly
 
 align : vertikal 
-start dari atas end bawah, center
+start dari atas 
+end bawah, 
+center
+space-arround
+space-between
+sapce-evenly
 */
 .content-container{
     display: grid;
@@ -102,6 +112,15 @@ start dari atas end bawah, center
     gap: 10px; /* row dan coloum */
     /* justify-content: end;
     align-content: end; */
-    justify-content: center;
-    align-content: center;
+    /* justify-content: center;
+    align-content: center; */
+  
+    /* justify-content: space-around;
+    align-content: space-around;
+
+    justify-content: space-evenly;
+    align-content: space-evenly; */
+
+    justify-content: space-between;
+    align-content: space-between;
 }
