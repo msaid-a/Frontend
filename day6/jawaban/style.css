@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    /* satuan pada css 
+        1.fix
+            -px
+            -cm
+        2.flexibel(responsive)
+        
+        div : width 100px, font-size :15px
+
+            -% (akan mengambil nilai dari parent)
+            width : 150%
+            100 * 1.5 = 150px
+
+            font-size = 150%
+            15 * 1.5 = 22.5px
+
+            -em (akan Berpatokan dengan font parent)
+                width = 1.5em
+                15*1.5 = 22.5px
+
+                font-size = 1.5em
+                15 * 1.5 = 22.5px
+    */
+    font-size: 1.5em;
+    display: grid;
+    grid-template-rows: 70px 800px 200px;
+}
+.navbar{
+    background: linear-gradient(to right, rgb(7,211,201),rgb(83, 233, 83), yellow);
+}
+.content{
+    background-image: url(./pictures/black-background.jpg);
+    background-position: center;
+}
+.footer{
+    background-color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    text-align: center;
+}
+nav li{
+    padding: 0.7em 0;
+}
+
+nav li a{
+    color: white;
+    font-weight: 700;
+    opacity: 0.7;
+    text-decoration: none;
+}
+nav li a:hover{
+    opacity: 1;
+}
+.hero{
+    /* lebar maximal 960px, namu dapat menegecil juka parentnya di kecilkan */
+    max-width: 960px;
+    margin: 20px auto;
+    text-align: center;
+    color: rgb(153, 149, 149);
+}
+div.hero img{
+    margin : 15px auto;
+    border-radius: 100px;
+    width: 200px;
+}
+div.hero h1{
+    font-size: 40px;
+    color: rgb(197, 193, 193);
+    font-weight: 60;
+}
+.btn{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 48px;
+    border-radius: 40px;
+    background-color: rgb(216, 12, 90);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    /* agar transisi jika di hover dan di klik memilki waktu 0.3 detik */
+    transition-duration: .3s;
+}
+/* style ketika kursuor mendekan (hover) */
+.btn:hover{
+    /* box shadow : horizontal vertikal blur spread color */
+    box-shadow: 0 20px 15px 0 purple;
+    /* menaikan element dai posisi asli */
+    transform: translateY(-3px);
+}
+
+/* style ketika klik */
+.btn:active{
+    /* box shadow : horizontal vertikal blur spread color */
+    box-shadow: 0 12px 15px 0 red;
+    transform: translateY(0px);
+
+}
