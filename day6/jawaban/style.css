@@ -31,7 +31,7 @@ body{
     */
     font-size: 1.5em;
     display: grid;
-    grid-template-rows: 70px 800px 200px;
+    grid-template-rows: 70px 800px 100px;
 }
 .navbar{
     background: linear-gradient(to right, rgb(7,211,201),rgb(83, 233, 83), yellow);
@@ -107,4 +107,30 @@ div.hero h1{
     box-shadow: 0 12px 15px 0 red;
     transform: translateY(0px);
 
+}
+div.footer{
+    background-color: white;
+}
+
+footer ul {
+    margin: 30px auto;
+    max-width: 670px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    text-align: center;
+}
+footer i {
+    color: grey;
+    opacity: 0.7;
+    font-size: 50px;
+}
+footer p{
+    color: grey;
+    font-size: 30px;
+}
+
+footer i:hover{
+    opacity: 1;
 }
