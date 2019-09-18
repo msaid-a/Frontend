@@ -169,26 +169,31 @@
 
 
         <!-- Naviggation -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
             <a class="navbar-brand" href="#">My Website</a>
-            <ul class="navbar-nav  mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Categories</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-            <form class="form-inline">
-                <input class="form-control" type="text"  >
-                <button class="btn btn-outline-secondary ml-3">Search</button>
-            </form>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#ulnavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ulnavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="row form-inline ml-auto">
+                    <input class="form-control mr-3 col-5 col-lg-8" type="text">
+                    <button class="btn btn-outline-secondary ">Search</button>
+                </form>
+            </div>
         </nav>
     </div>
 
