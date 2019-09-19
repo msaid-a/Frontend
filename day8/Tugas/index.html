@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        form {
+            width: 45%;
+            margin: 0 auto;
+        }
+    </style>
+    <script defer src="function.js"></script>
+</head>
+
+<body>
+
+    <!-- 
+        1. Dapat menginput data baru berupa nama, umur, dan pekerjaan. Jika pekerjaan yang di input tidak ada dalam list, maka akan di tambahkan ke list data pekerjaan baru, seperti yang di demokan di kelas
+        2. Dapat melakukan filter by name. Huruf kecil dan besar tidak berpengaruh untuk filter by name, tidak membedakan huruf besar dan kecil.
+        3. Dapat melakukan range umur minimum dan maksimum, umur minimum dan maksimum
+        4. Dapat filter pekerjaan
+     -->
+     <p id='id'>ajalkjsalk</p>
+    <form >
+        <!-- FILTER -->
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama: <input type="text" id="search" oninput="funFilterName()"></p>
+            <p>Umur: <input type="number" name="num1" id="num1" onkeyup="funFilterUmur()"> - <input type="number" name="num2" id="num2"
+                    onkeyup="funFilterUmur()"></p>
+            <p>Pekerjaan: <select name="job" id="job">
+                </select>
+            </p>
+            <p><input type="button" value="Search Job" onclick="funFilterJob()"></p>
+        </fieldset>
+        
+        <!-- INPUT -->
+        <fieldset>
+            <legend>Input Data</legend>
+            <table>
+                <td><input type="text" name="nama" id="nama"></td>
+                <td><input type="number" name="nama" id="umur"></td>
+                <td><input type="text" name="nama" id="jobInput"></td>
+            </table>
+            <p><input type="button" value="Submit" onclick="funInputData()"></p>
+        </fieldset>
+
+        <!-- RENDER -->
+        <fieldset>
+            <legend>Tabel Data</legend>
+            <table id="myTable">
+                <thead>
+                    <th>Nama</th>
+                    <th>Umur</th>
+                    <th>Pekerjaan</th>
+                    <th colspan="2">Action</th>
+                </thead>
+                <tbody id="here">
+                    
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>
