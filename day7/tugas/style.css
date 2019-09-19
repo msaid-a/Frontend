@@ -1,3 +1,7 @@
 .card{
     height: 100% ;
 }
+
+.border-top{
+    border-top : 4px solid rgb(211, 207, 207) !important;
+}
