@@ -4,6 +4,10 @@ import axios from 'axios'
 
 class App extends Component{
 
+  state ={
+      pictures:[]
+  }
+  // terms adalah inoutan 
   onSearchSubmit = (term) =>{
     // request gambar
     axios.get(
@@ -18,9 +22,10 @@ class App extends Component{
         }
       }
     ).then((respon) => {
+      // then akan dijalakan ketika proses rquest berhasil
       // Object yang punya banyak properti
-      console.log(respon.data.results)
-    
+      // console.log(respon.data.results)
+      this.setState({pictures :respon.data.results})
     })
   }
 
@@ -29,6 +34,7 @@ class App extends Component{
       <div className="container">
       <header>
         <h1 className ="text-center mt-3 mb-5">Image Search Engine</h1>
+        {/* 'SearchSubmit' */}
           <Search SearchSubmit = {this.onSearchSubmit}/>
       </header>
     </div>
