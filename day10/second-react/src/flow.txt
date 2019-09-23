@@ -1,0 +1,5 @@
+1. user akan input text
+2. app akan menrima text
+3. text dari user di gunakan untuk request kemudian respon
+4. dari respn kira ambil link gambr
+5. render image berdasarkan link yang ada

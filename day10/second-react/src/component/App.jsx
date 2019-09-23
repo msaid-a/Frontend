@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Search from './search'
 
-function App() {
-  return (
-    <div className="container">
+class App extends Component{
+  render (){
+    return (
+      <div className="container">
       <header>
         <h1 className ="text-center mt-3 mb-5">Image Search Engine</h1>
-        <Search />
+          <Search />
       </header>
     </div>
   );
+}
 }
 
 export default App;
