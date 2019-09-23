@@ -1,10 +1,27 @@
 import React, {Component} from 'react';
 import Search from './search'
+import axios from 'axios'
 
 class App extends Component{
 
   onSearchSubmit = (term) =>{
-    console.log(term)
+    // request gambar
+    axios.get(
+      'https://api.unsplash.com/search/photos', 
+      {
+        headers : {
+          Authorization: 'Client-ID 5b0f90dcc3c1c83a0a27ac4f519c20caef687efa7493cee91fc26199c3304419'
+        },
+
+        params: {
+          query: term
+        }
+      }
+    ).then((respon) => {
+      // Object yang punya banyak properti
+      console.log(respon.data.results)
+    
+    })
   }
 
   render (){
@@ -12,7 +29,7 @@ class App extends Component{
       <div className="container">
       <header>
         <h1 className ="text-center mt-3 mb-5">Image Search Engine</h1>
-          <Search onSearchSubmit = {this.onSearchSubmit}/>
+          <Search SearchSubmit = {this.onSearchSubmit}/>
       </header>
     </div>
   );

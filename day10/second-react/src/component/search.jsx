@@ -10,8 +10,8 @@ class search extends Component {
     onSubmitFrom = (event) =>{
         // fungction yang akan mengcancel refresh
         event.preventDefault()
-        // cara akses propoerti di luar class (file yang berbeda)
-        this.props.onSearchSubmit(this.state.term)
+        // .props cara akses propoerti di luar class (file yang berbeda)
+        this.props.SearchSubmit(this.state.term)
     }
 
     render() {
