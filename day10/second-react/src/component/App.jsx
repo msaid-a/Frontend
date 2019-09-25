@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import Search from './search'
+import ImageList from './imagesList'
 import axios from 'axios'
+import Api from './api'
 
 class App extends Component{
 
   state ={
       pictures:[]
   }
-  // terms adalah inoutan 
+
+  //terms adalah inoutan 
   onSearchSubmit = (term) =>{
     // request gambar
     axios.get(
@@ -28,6 +31,9 @@ class App extends Component{
       this.setState({pictures :respon.data.results})
     })
   }
+  // onSearchSubmit = () =>{
+  //     Api.get(this.state.terms).then(res =>{console.log (res)})
+  // }
 
   render (){
     return (
@@ -36,6 +42,7 @@ class App extends Component{
         <h1 className ="text-center mt-3 mb-5">Image Search Engine</h1>
         {/* 'SearchSubmit' */}
           <Search SearchSubmit = {this.onSearchSubmit}/>
+          <ImageList show = {this.state.pictures}/>
       </header>
     </div>
   );
@@ -43,3 +50,4 @@ class App extends Component{
 }
 
 export default App;
+// AIzaSyDk0JfRI4SSOpZKQnyn5uB3LmSadRoQP4A
