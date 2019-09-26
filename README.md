@@ -1,3 +1,3 @@
 # Frontend
-this is practice me in Modul Front End Purwadhika
+this is My practice in Modul Front End Purwadhika
 
