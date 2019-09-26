@@ -1,8 +1,17 @@
 {
-    "users":[
-      
-    ],
-    "products" : [
-
-    ]
+  "users": [
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "admin",
+      "id": 1
+    },
+    {
+      "username": "ujang",
+      "email": "ujang@email.com",
+      "password": "ujang",
+      "id": 2
+    }
+  ],
+  "products": []
 }

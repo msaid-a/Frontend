@@ -1,15 +1,26 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
  class Register extends Component {
 
     onSubmitClick = () =>{
         //  ambil data dari text boz
-        let username = this.username.value
-        let email = this.email.value
-        let password = this.sandi.value
-        // simpan data di json
-
-        console.log(username, email, password)
+        let _username = this.username.value
+        let _email = this.email.value
+        let _password = this.sandi.value
+        
+        // POST data ke json
+        axios.post(
+            'http://localhost:2019/users',
+            {
+                username: _username,
+                email : _email,
+                password : _password
+            }
+        )
+            this.username.value = ''
+            this.email.value = ''
+            this.sandi.value = ''
     }
 
     render() {
@@ -19,7 +30,7 @@ import React, { Component } from 'react'
                     <div className='border-bottom border-secondary card-tittle'>
                         <h1>Register</h1>
                     </div>
-                    <form className="form-group">
+                    <form className="form-group" onSubmit={event => event.preventDefault()}>
                         <div className='card-title'>
                             <h4>Username</h4>
                         </div>
@@ -32,8 +43,8 @@ import React, { Component } from 'react'
                             <h4>Password</h4>
                         </div>
                         <input className="form-control" type="password" name="password" id=""ref={(input) => {this.sandi =  input}} />
+                    <button onClick={this.onSubmitClick} className="btn btn-outline-danger btn-block mt-4" >Register</button>
                     </form>
-                    <button onClick={this.onSubmitClick} className="btn btn-outline-danger btn-block" >Register</button>
                 </div>
             </div>
         )
