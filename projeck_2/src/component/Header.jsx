@@ -4,11 +4,8 @@ import {
     Navbar,
     NavbarToggler,
     Nav,
-    NavItem,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    NavItem
+   } from 'reactstrap';
 import {NavLink, Link} from 'react-router-dom'
 
 class Header extends Component {
