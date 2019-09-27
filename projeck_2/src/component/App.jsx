@@ -6,6 +6,7 @@ import Login from './Login'
 import Home from './Home'
 import Register from './Register'
 import Header from './Header'
+import ManageProducts from './ManageProducts'
 
 export class App extends Component {
   render() {
@@ -16,6 +17,7 @@ export class App extends Component {
                 <Route path='/'  component={Home} exact/>
                 <Route path='/login' component={Login} />
                 <Route path='/register' component={Register} />
+                <Route path='/manageproducts' component={ManageProducts} />
               </div>
         </BrowserRouter>
     )
