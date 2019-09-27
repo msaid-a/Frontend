@@ -16,16 +16,16 @@
   "products": [
     {
       "nama": "baju",
-      "deskripsi": "ini baju",
-      "harga": "20000",
-      "linkGambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2017/2/16/6931675/6931675_68f444ae-0cdd-4661-a904-08c5e20e4284_800_800.jpg",
+      "deskripsi": "ini bajyu",
+      "harga": "80000",
+      "linkGambar": "https://s.kaskus.id/r480x480/images/fjb/2017/09/19/kaos_polos_soft_tees_black__asian_fit_8402897_1505787883.jpg",
       "id": 1
     },
     {
       "nama": "baju",
-      "deskripsi": "ini baju ",
-      "harga": "300000",
-      "linkGambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2017/2/16/6931675/6931675_68f444ae-0cdd-4661-a904-08c5e20e4284_800_800.jpg",
+      "deskripsi": "ini Baju ",
+      "harga": "10000",
+      "linkGambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2018/12/12/1209433/1209433_2d4ee723-f7a4-402a-a70c-af9ee6d2016e_800_800.jpg",
       "id": 2
     }
   ]
