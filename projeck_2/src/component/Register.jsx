@@ -11,7 +11,7 @@ import axios from 'axios'
         
         // POST data ke json
         axios.post(
-            'http://localhost:2019/users',
+            'http://localhost:2020/users',
             {
                 username: _username,
                 email : _email,

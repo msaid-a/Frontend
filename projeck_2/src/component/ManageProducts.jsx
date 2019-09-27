@@ -1,6 +1,40 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class ManageProducts extends Component {
+    
+    clear = () =>{
+         this.namaBarang.value =''
+         this.deskripsi.value =''
+         this.harga.value =''
+         this.linkGambar.value =''
+    }
+
+    onAddClick = () =>{
+        let _namaBarang = this.namaBarang.value
+        let _deskripsi = this.deskripsi.value
+        let _harga = this.harga.value
+        let _gambar = this.linkGambar.value
+        
+        console.log(_namaBarang, _deskripsi, _harga, _gambar)
+        axios.post(
+            'http://localhost:2020/products',
+            {
+                nama: _namaBarang,
+                deskripsi: _deskripsi,
+                harga : _harga,
+                linkGambar : _gambar
+            }
+        )
+         this.clear()
+        
+    }
+
+    tampil = () =>{
+
+    }
+
+
     render() {
         return (
             <div className="container">
@@ -30,11 +64,11 @@ class ManageProducts extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input className="form-control" type="text"/></td>
-                            <td><input className="form-control" type="text"/></td>
-                            <td><input className="form-control" type="text"/></td>
-                            <td><input className="form-control" type="text"/></td>
-                            <td><button className="btn btn-primary">ADD</button></td>
+                            <td><input className="form-control" type="text" ref={input => {this.namaBarang = input}}/></td>
+                            <td><input className="form-control" type="text" ref={input => {this.deskripsi = input}}/></td>
+                            <td><input className="form-control" type="text" ref={input => {this.harga = input}}/></td>
+                            <td><input className="form-control" type="text" ref={input => {this.linkGambar = input}}/></td>
+                            <td><button className="btn btn-danger" onClick={this.onAddClick}>ADD</button></td>
                         </tr>
                     </tbody>
                 </table>

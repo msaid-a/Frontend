@@ -13,5 +13,20 @@
       "id": 2
     }
   ],
-  "products": []
+  "products": [
+    {
+      "nama": "baju",
+      "deskripsi": "ini baju",
+      "harga": "20000",
+      "linkGambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2017/2/16/6931675/6931675_68f444ae-0cdd-4661-a904-08c5e20e4284_800_800.jpg",
+      "id": 1
+    },
+    {
+      "nama": "baju",
+      "deskripsi": "ini baju ",
+      "harga": "300000",
+      "linkGambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2017/2/16/6931675/6931675_68f444ae-0cdd-4661-a904-08c5e20e4284_800_800.jpg",
+      "id": 2
+    }
+  ]
 }
