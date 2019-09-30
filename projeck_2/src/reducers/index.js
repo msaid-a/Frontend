@@ -2,6 +2,7 @@
 
 import { combineReducers } from 'redux'
 
+// nilai awal simpan auth
 const initState = {
     id :0,
     username: ''
@@ -20,13 +21,15 @@ const authReducer = (state = initState, action) =>{
     }
 }
 
-combineReducers(
+// unutnuk menentukan tempat onyeimpanan dari dari setiap reduces
+// authReducers alkan memikili tempat penyimpanan auth 
+let reducers = combineReducers(
     {
         auth : authReducer
     }
 )
 
-
+export default reducers
 // action adalah bject yang memiliki 2 properti 
     // type : untuk menentukan reducers mana yang akan mengola 
     // payload : berisi data yang akan di olah

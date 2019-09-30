@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { connect } from 'react-redux'
+import { sendData } from '../actions/index'
 
 class Login extends Component {
 
@@ -20,10 +22,12 @@ class Login extends Component {
             if(res.data.length === 0){
                 console.log('Username dan password salah')
             }else{
-                console.log(`Data di temukan 
-                 username = ${res.data[0].username} 
-                 email = ${res.data[0].email} 
-                 password = ${res.data[0].password}`)
+                // kirim id dan username ke reducers
+                this.props.sendData(
+                     res.data[0].id,
+                     res.data[0].username
+                )
+               
             }
         })
     }
@@ -52,4 +56,4 @@ class Login extends Component {
     }
 }
 
-export default Login
+export default connect(null, {sendData})(Login)
