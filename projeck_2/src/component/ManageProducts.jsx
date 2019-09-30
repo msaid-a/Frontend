@@ -30,11 +30,19 @@ class ManageProducts extends Component {
       }
 
       onSaveUpdate = (id) =>{
-        let _nama = this.editBarang.value ? this.editBarang.value : this.editBarang.placeholder
-        let _deskripsi = this.editDeskripsi.value ? this.editDeskripsi.value : this.editDeskripsi.placeholder
-        let _harga = this.editHarga.value ? this.editHarga.value : this.editHarga.placeholder
-        let _linkGambar = this.editLinkGambar.value ? this.editLinkGambar.value : this.editLinkGambar.placeholder
-        console.log(_nama,_deskripsi,_harga, _linkGambar)
+        // // With placeholder
+        // let _nama = this.editBarang.value ? this.editBarang.value : this.editBarang.placeholder
+        // let _deskripsi = this.editDeskripsi.value ? this.editDeskripsi.value : this.editDeskripsi.placeholder
+        // let _harga = this.editHarga.value ? this.editHarga.value : this.editHarga.placeholder
+        // let _linkGambar = this.editLinkGambar.value ? this.editLinkGambar.value : this.editLinkGambar.placeholder
+
+        //  // with Value
+
+        let _nama = this.editBarang.value 
+        let _deskripsi = this.editDeskripsi.value 
+        let _harga = this.editHarga.value        
+        let _linkGambar = this.editLinkGambar.value
+
         axios.patch('http://localhost:2020/products/' + id,{
             nama : _nama,
             deskripsi : _deskripsi,
@@ -45,7 +53,7 @@ class ManageProducts extends Component {
             Swal.fire(
                 'Success!',
                 'Your file has been Update.',
-                'success'
+                'success',
                 )
                 this.toggleCancel()
         })
@@ -85,8 +93,8 @@ class ManageProducts extends Component {
                             <img height="60" src={produk.linkGambar} alt=""/>
                         </td>
                         <td>
-                                <button onClick = {() => {this.toggleUpdate(produk.id)}} className="btn btn-primary">Edit</button>
-                                <button onClick={() => {this.onDeleteClick(produk.id)}} className="btn btn-danger ml-1 ">Delete</button>
+                                <button onClick = {() => {this.toggleUpdate(produk.id)}} className="btn btn-primary mr-1" data-target="#modal1">Edit</button>
+                                <button onClick={() => {this.onDeleteClick(produk.id)}} className="btn btn-danger ">Delete</button>
                         </td>
                     </tr>
         })
@@ -113,11 +121,12 @@ class ManageProducts extends Component {
             // this.clear()
             this.getData()
             this.clear()
-            Swal.fire(
-                'Success!',
-                'Your file has been Added.',
-                'success'
-                )
+            Swal.fire({
+                title:'Your file has been Added.',
+                type : 'success',
+                showConfirmButton:false,
+                timer: 1500,
+            })
         })
         
     }
@@ -137,11 +146,12 @@ class ManageProducts extends Component {
                 axios.delete('http://localhost:2020/products/' + id).then(res =>{
                     this.getData()
                 })
-                  Swal.fire(
-                      'Deleted!',
-                      'Your file has been deleted.',
-                      'success'
-                      )
+                  Swal.fire({
+                    title:'Your file has been Deleted.',
+                    type : 'success',
+                    showConfirmButton:false,
+                    timer: 1500,
+                  })
                   
             }
           })
@@ -182,26 +192,36 @@ class ManageProducts extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input className="form-control" type="text" ref={input => {this.namaBarang = input}}/></td>
-                            <td><input className="form-control" type="text" ref={input => {this.deskripsi = input}}/></td>
-                            <td><input className="form-control" type="text" ref={input => {this.harga = input}}/></td>
-                            <td><input className="form-control" type="text" ref={input => {this.linkGambar = input}}/></td>
-                            <td><button className="btn btn-danger" onClick={this.onAddClick}>ADD</button></td>
+                            <td>
+                                <input className="form-control" type="text" ref={input => {this.namaBarang = input}}/>
+                            </td>
+                            <td>
+                                <input className="form-control" type="text" ref={input => {this.deskripsi = input}}/>
+                            </td>
+                            <td>
+                                <input className="form-control" type="text" ref={input => {this.harga = input}}/>
+                            </td>
+                            <td>
+                                <input className="form-control" type="text" ref={input => {this.linkGambar = input}}/>
+                                </td>
+                            <td>
+                                <button className="btn btn-dark" onClick={this.onAddClick}>Add</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
-                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} id="modal1">
                     <ModalHeader toggle={this.toggle}>{nama}</ModalHeader>
                     <ModalBody>
                         <form>
                             <label>Nama:</label>
-                             <input className="form-control" type="text" ref={input=> {this.editBarang = input}} placeholder={nama}/>
+                             <input className="form-control" type="text" ref={input=> {this.editBarang = input}} defaultValue={nama}/>
                             <label>Deskripsi : </label>
-                            <input className="form-control" type="text" ref={input=> {this.editDeskripsi =input}} placeholder={deskripsi} / >
+                            <input className="form-control" type="text" ref={input=> {this.editDeskripsi =input}} defaultValue={deskripsi} / >
                             <label >Harga :</label>
-                            <input className="form-control" type="text" ref={input=> {this.editHarga=input}} placeholder={harga} />
+                            <input className="form-control" type="text" ref={input=> {this.editHarga=input}} defaultValue={harga} />
                             <label>Link Gambar :</label>
-                            <input className="form-control" type="text" ref={input=> {this.editLinkGambar = input}} placeholder={linkGambar}/>
+                            <input className="form-control" type="text" ref={input=> {this.editLinkGambar = input}} defaultValue={linkGambar}/>
                         </form>
                     </ModalBody>
                     <ModalFooter>
@@ -213,8 +233,9 @@ class ManageProducts extends Component {
         )
     }
 }
-
 export default ManageProducts
+
+
 // // 1. mampu menambah program (Post)
 // // 2, mamou membaca produtck (Get)
 // // 3. Update produtcs (PATCH)

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
  class Register extends Component {
 
@@ -17,10 +18,16 @@ import axios from 'axios'
                 email : _email,
                 password : _password
             }
-        )
-            this.username.value = ''
-            this.email.value = ''
-            this.sandi.value = ''
+        ).then(res => {
+            Swal.fire(
+                'Success!',
+                'User has Added',
+                'success'
+                )
+                this.username.value = ''
+                this.email.value = ''
+                this.sandi.value = ''
+        }) 
     }
 
     render() {
