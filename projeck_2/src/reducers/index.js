@@ -11,7 +11,7 @@ const initState = {
 const authReducer = (state = initState, action) =>{
     switch(action.type){
         case "LOGIN_SUCCESS":
-            break;
+            return {...state, id: action.payload.id, username: action.payload.username}   
 
         case "LOGOUT_SUCCESS":
 
