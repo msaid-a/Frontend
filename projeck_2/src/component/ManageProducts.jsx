@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class ManageProducts extends Component {
     state = {
@@ -236,7 +236,13 @@ class ManageProducts extends Component {
 export default ManageProducts
 
 
-// // 1. mampu menambah program (Post)
+{/* // // 1. mampu menambah program (Post)
 // // 2, mamou membaca produtck (Get)
 // // 3. Update produtcs (PATCH)
-// // 4. Delete Produtcs (DELETE)
+// // 4. Delete Produtcs (DELETE) */}
+
+{/*  ketika function yang di panggil dalam onclick tidak memiliki parameter maka
+        onClick={this.namaFunction}
+    ketika function yang di panggil dalam onClick memiliki parameter maka hrus di masukan dalam function
+        onClick {()=.{this.namaFunction}} 
+*/}

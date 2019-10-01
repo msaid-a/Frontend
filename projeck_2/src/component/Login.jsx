@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
 import { sendData } from '../actions/index'
+import Swal from 'sweetalert2'
+
 
 class Login extends Component {
 
@@ -20,7 +22,13 @@ class Login extends Component {
             }
         ).then((res) => {
             if(res.data.length === 0){
-                console.log('Username dan password salah')
+                Swal.fire({
+                    type: 'error',
+                    title: 'Sorry',
+                    text: 'Username atau Password Salah!',
+                    showConfirmButton:false,
+                    timer:900
+                  })
             }else{
                 // kirim id dan username ke reducers
                 this.props.sendData(
@@ -57,3 +65,5 @@ class Login extends Component {
 }
 
 export default connect(null, {sendData})(Login)
+
+// connect (ambil data, kirim data)
