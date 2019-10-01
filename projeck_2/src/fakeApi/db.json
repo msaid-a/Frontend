@@ -14,15 +14,9 @@
     },
     {
       "username": "said",
-      "email": "said@email.com",
+      "email": "said@said.com",
       "password": "11223344",
       "id": 3
-    },
-    {
-      "username": "said",
-      "email": "said@rmail.com",
-      "password": "said",
-      "id": 4
     }
   ],
   "products": [

@@ -3,9 +3,16 @@ import axios from 'axios'
 import { connect } from 'react-redux'
 import { sendData } from '../actions/index'
 import Swal from 'sweetalert2'
+import {Redirect} from 'react-router-dom'
 
 
 class Login extends Component {
+
+    redirect = () =>{
+        if(this.props.userName){
+            return (<Redirect to ='/'> </Redirect>)
+        }
+    }
 
     onSignInClick = () =>{
         let _username = this.username.value
@@ -35,7 +42,6 @@ class Login extends Component {
                      res.data[0].id,
                      res.data[0].username
                 )
-               
             }
         })
     }
@@ -44,6 +50,7 @@ class Login extends Component {
         return (
             <div className="card mx-auto mt-5 col-5">
                 <div className='card-body'>
+                    {this.redirect()}
                     <div className='border-bottom border-secondary card-title'>
                     <h1>Login</h1>
                     </div>
@@ -64,6 +71,12 @@ class Login extends Component {
     }
 }
 
-export default connect(null, {sendData})(Login)
+const mapStateToProps = (state) =>{
+    return {
+      userName : state.auth.username,
+      iD : state.auth.id,
+    }
+  }
+export default connect(mapStateToProps, {sendData})(Login)
 
 // connect (ambil data, kirim data)
