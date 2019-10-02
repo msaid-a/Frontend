@@ -17,6 +17,11 @@
       "email": "said@said.com",
       "password": "11223344",
       "id": 3
+    },
+    {
+      "username": "admin2",
+      "password": "",
+      "id": 4
     }
   ],
   "products": [
@@ -33,6 +38,13 @@
       "harga": "50000",
       "linkGambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2015/9/20/596881/596881_be5245a8-a6d6-45d3-a24f-d2a8a9f97367.jpg",
       "id": 5
+    },
+    {
+      "nama": "baju",
+      "deskripsi": "ini baju",
+      "harga": "20000",
+      "linkGambar": "https://www.terminalfashion.com/image/cache/catalog/01-03-18/TX55000%20BAJU%20ANAK%20KD%20DRS%20KELLY%20TURKIS%20bahan%20saten%20taveta%20mix%20brokat%20+%20bandana%20fit%202-4th%20180gr-1200x960.jpg",
+      "id": 6
     }
   ]
 }

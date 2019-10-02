@@ -17,33 +17,8 @@ class Login extends Component {
     onSignInClick = () =>{
         let _username = this.username.value
         let _password = this.password.value
-
-        // Get data
-        axios.get(
-            'http://localhost:2020/users', 
-            {
-                params:{
-                    username : _username,
-                    password : _password
-                }
-            }
-        ).then((res) => {
-            if(res.data.length === 0){
-                Swal.fire({
-                    type: 'error',
-                    title: 'Sorry',
-                    text: 'Username atau Password Salah!',
-                    showConfirmButton:false,
-                    timer:900
-                  })
-            }else{
-                // kirim id dan username ke reducers
-                this.props.sendData(
-                     res.data[0].id,
-                     res.data[0].username
-                )
-            }
-        })
+        this.props.sendData(_username, _password)
+       
     }
 
     render() {

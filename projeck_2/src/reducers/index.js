@@ -8,6 +8,7 @@ const initState = {
     username: ''
 }
 
+
 const authReducer = (state = initState, action) =>{
     switch(action.type){
         case "LOGIN_SUCCESS":
@@ -24,7 +25,7 @@ const authReducer = (state = initState, action) =>{
 // authReducers alkan memikili tempat penyimpanan auth 
 let reducers = combineReducers(
     {
-        auth : authReducer
+        auth : authReducer,
     }
 )
 

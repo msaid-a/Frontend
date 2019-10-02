@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
-import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+import {Redirect} from 'react-router-dom'
+
 
 class ManageProducts extends Component {
     state = {
@@ -10,6 +12,13 @@ class ManageProducts extends Component {
         idProducts: 0,
         modal : false
     }
+    // Redirect
+    redirect = () =>{
+        if(this.props.userName === ''){
+            return (<Redirect to ='/'> </Redirect>)
+        }
+    }
+
 // Update Barang
     toggleUpdate = (id) =>{
         axios.get('http://localhost:2020/products/' + id).then(
@@ -78,6 +87,7 @@ class ManageProducts extends Component {
 
     componentDidMount = () =>{
         this.getData()
+        
     }
 
 // tampil Barang dalam bentuk tabel
@@ -163,6 +173,7 @@ class ManageProducts extends Component {
         let {id, nama, deskripsi, harga, linkGambar} = this.state.selectProducts
         return (
             <div className="container">
+                {this.redirect()}
                 <h1 className="display-4 text-center">List Products</h1>
                 <table className="table table-hover text-center">
                     <thead>

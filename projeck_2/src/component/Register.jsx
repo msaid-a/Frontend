@@ -17,64 +17,53 @@ import {Redirect} from 'react-router-dom'
         let _username = this.username.value
         let _email = this.email.value
         let _password = this.sandi.value
-        //cek username
-        axios.get(
-            'http://localhost:2020/users', 
-            {
-                params:{
-                    username : _username
-                    // password : _password
-                }
-            }
-        ).then(res =>{
-            if (res.data.length > 0){
-                Swal.fire(
-                    'Sorry',
-                    'Username Telah Di Gunakan',
-                    'error'
-                    )
-             }
-            else{
-                axios.get(
-                    'http://localhost:2020/users', 
-                    {
-                        params:{
-                            email : _email
-                            // password : _password
-                        }
-                    }
-                ).then(res => {
-                    if(res.data.length > 0){
-                        Swal.fire(
-                            'Sorry',
-                            'Email Telah Di Gunakan',
-                            'error'
-                            )
-                    }else{
-                        axios.post(
-                            'http://localhost:2020/users',
-                            {
-                                username: _username,
-                                email : _email,
-                                password : _password
-                            }
-                        ).then(res => {
-                            Swal.fire(
-                                'Success!',
-                                'User has Added',
-                                'success'
-                                )
-                                this.username.value = ''
-                                this.email.value = ''
-                                this.sandi.value = ''
-                        })
-                    }
-                })
-            }
+        //cek username  
+       
+        axios.get('http://localhost:2020/users',)
+        .then(res => {
+           let sameUserName = res.data.filter(data => {
+               return data.username === _username
+           })
 
-        }
-        )   
-        // POST data ke json
+           if (sameUserName.length > 0) {
+               Swal.fire(
+                   'Sorry',
+                   'Username Telah Di Gunakan',
+                   'error'
+               )
+           } else {
+               let sameEmail = res.data.filter(data => {
+                   return data.email === _email
+               })
+               if (sameEmail.length > 0) {
+                   Swal.fire(
+                       'Sorry',
+                       'Email Telah Di Gunakan',
+                       'error'
+                   )
+
+               } else {
+                   axios.post(
+                       'http://localhost:2020/users', {
+                           username: _username,
+                           email: _email,
+                           password: _password
+                       }
+                   ).then(res => {
+                       Swal.fire(
+                           'Success!',
+                           'User has Added',
+                           'success'
+                       )
+                       this.username.value = ''
+                       this.email.value = ''
+                       this.sandi.value = ''
+                   })
+               }
+           }
+
+
+           })
          
     }
 
