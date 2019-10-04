@@ -7,7 +7,8 @@ import Home from './Home'
 import Register from './Register'
 import Header from './Header'
 import ManageProducts from './ManageProducts'
-
+import DetailProducts from './DetailProducts'
+import Carts from './Carts'
 
 import {session} from '../actions/index'
 
@@ -31,6 +32,8 @@ export class App extends Component {
                 <Route path='/login' component={Login} />
                 <Route path='/register' component={Register} />
                 <Route path='/manageproducts' component={ManageProducts} />
+                <Route path='/detailproducts/:idProduk' component={DetailProducts} />
+                <Route path='/carts' component={Carts} />
               </div>
         </BrowserRouter>
     )
@@ -38,3 +41,5 @@ export class App extends Component {
 }
 
 export default connect(null,{session})(App)
+// titik 2 pada path merupakan sebuah variable yang menyimopan data
+  // data pada variable dapat berubah

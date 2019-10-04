@@ -7,11 +7,6 @@ import {Redirect} from 'react-router-dom'
 
  class Register extends Component {
 
-    redirect = () =>{
-        if(this.props.userName){
-            return (<Redirect to ='/'> </Redirect>)
-        }
-    }
     onSubmitClick = () =>{
         //  ambil data dari text box
         let _username = this.username.value
@@ -68,9 +63,11 @@ import {Redirect} from 'react-router-dom'
     }
 
     render() {
+        if(this.props.userName){
+            return (<Redirect to ='/'> </Redirect>)
+        }
         return (
             <div className=" col-5 mx-auto mt-5 card">
-            {this.redirect()}
                 <div className='card-body'>
                     <div className='border-bottom border-secondary card-tittle'>
                         <h1>Register</h1>

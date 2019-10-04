@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {
-    Button,
     Collapse,
     Navbar,
     NavbarToggler,
@@ -28,7 +27,7 @@ class Header extends Component {
           isOpen: !this.state.isOpen
         });
       }
-
+      
       renderNavigasi = () =>{
         if(!this.props.userName){
           //belum login
@@ -63,12 +62,16 @@ class Header extends Component {
                     Manage Product
                   </DropdownItem>
                 </NavLink>
+                <NavLink tag={Link} to='/carts'>
+                  <DropdownItem>
+                    Carts
+                  </DropdownItem>
+                </NavLink>
                 <NavLink tag={Link} onClick={this.props.logoutData}>
                   <DropdownItem>
                     Logout
                   </DropdownItem>
                 </NavLink>
-                {/* <Button className="dropdown-item nav-link" onClick={this.props.logoutData}>Logout</Button> */}
               </DropdownMenu>
             </UncontrolledDropdown>
             </Nav>

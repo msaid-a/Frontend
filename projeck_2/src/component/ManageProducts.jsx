@@ -3,20 +3,21 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 import {Redirect} from 'react-router-dom'
+import {connect} from 'react-redux'
 
-
+const mapStateToProps = (state) =>{
+    return {
+      userName : state.auth.username,
+      iD : state.auth.id,
+    }
+  }
+  
 class ManageProducts extends Component {
     state = {
         products : [],
         selectProducts : {id : '', nama : '', deskripsi : '',harga : '', linkGambar: ''},
         idProducts: 0,
         modal : false
-    }
-    // Redirect
-    redirect = () =>{
-        if(this.props.userName === ''){
-            return (<Redirect to ='/'> </Redirect>)
-        }
     }
 
 // Update Barang
@@ -39,13 +40,6 @@ class ManageProducts extends Component {
       }
 
       onSaveUpdate = (id) =>{
-        // // With placeholder
-        // let _nama = this.editBarang.value ? this.editBarang.value : this.editBarang.placeholder
-        // let _deskripsi = this.editDeskripsi.value ? this.editDeskripsi.value : this.editDeskripsi.placeholder
-        // let _harga = this.editHarga.value ? this.editHarga.value : this.editHarga.placeholder
-        // let _linkGambar = this.editLinkGambar.value ? this.editLinkGambar.value : this.editLinkGambar.placeholder
-
-        //  // with Value
 
         let _nama = this.editBarang.value 
         let _deskripsi = this.editDeskripsi.value 
@@ -78,6 +72,7 @@ class ManageProducts extends Component {
     getData = () =>{
         axios.get('http://localhost:2020/products')
             .then(res => {
+            console.log(res.data)
                 this.setState({
                     products: res.data,
                 })
@@ -170,10 +165,13 @@ class ManageProducts extends Component {
     
 
     render() {
+        if(!this.props.userName){
+            return (<Redirect to ='/'> </Redirect>)
+        }
         let {id, nama, deskripsi, harga, linkGambar} = this.state.selectProducts
+        
         return (
             <div className="container">
-                {this.redirect()}
                 <h1 className="display-4 text-center">List Products</h1>
                 <table className="table table-hover text-center">
                     <thead>
@@ -244,7 +242,9 @@ class ManageProducts extends Component {
         )
     }
 }
-export default ManageProducts
+
+
+export default connect(mapStateToProps,null)(ManageProducts)
 
 
 {/* // // 1. mampu menambah program (Post)

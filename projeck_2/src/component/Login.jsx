@@ -1,18 +1,10 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 import { connect } from 'react-redux'
 import { sendData } from '../actions/index'
-import Swal from 'sweetalert2'
 import {Redirect} from 'react-router-dom'
 
 
 class Login extends Component {
-
-    redirect = () =>{
-        if(this.props.userName){
-            return (<Redirect to ='/'> </Redirect>)
-        }
-    }
 
     onSignInClick = () =>{
         let _username = this.username.value
@@ -22,10 +14,12 @@ class Login extends Component {
     }
 
     render() {
+        if(this.props.userName){
+            return (<Redirect to ='/' /> )
+        }
         return (
             <div className="card mx-auto mt-5 col-5">
                 <div className='card-body'>
-                    {this.redirect()}
                     <div className='border-bottom border-secondary card-title'>
                     <h1>Login</h1>
                     </div>
